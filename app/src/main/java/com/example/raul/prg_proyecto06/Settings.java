@@ -17,10 +17,10 @@ public class Settings extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.raul.prg_proyecto06.R.layout.activity_settings);
+        setContentView(R.layout.activity_settings);
          final SharedPreferences my_preferences = getSharedPreferences("preferences", MODE_PRIVATE);
-        Button menu = (Button)findViewById(com.example.raul.prg_proyecto06.R.id.menu_button);
-        Switch music_status = (Switch) findViewById(com.example.raul.prg_proyecto06.R.id.musicStatus);
+        Button menu = (Button)findViewById(R.id.menu_button);
+        Switch music_status = (Switch) findViewById(R.id.musicStatus);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +52,7 @@ public class Settings extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(com.example.raul.prg_proyecto06.R.menu.menu_settings, menu);
+        getMenuInflater().inflate(R.menu.menu_settings, menu);
         return true;
     }
 
@@ -64,7 +64,7 @@ public class Settings extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == com.example.raul.prg_proyecto06.R.id.action_settings) {
+        if (id == R.id.action_settings) {
             return true;
         }
 

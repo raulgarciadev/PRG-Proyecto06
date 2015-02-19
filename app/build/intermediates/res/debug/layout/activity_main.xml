@@ -1,0 +1,87 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:stretchColumns="0,1"
+    android:background="#ff404140">
+
+    <TableRow
+        android:layout_weight="1"
+        android:background="#ff2b2b2b">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likeButton"
+            android:src="@drawable/like"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="#ff7cff82"
+            android:padding="10dp"
+            android:tint="#ffffffff" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hateButton"
+            android:src="@drawable/dislike"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="#ffef425d"
+            android:padding="10dp"
+            android:tint="#ffffffff" />
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1"
+        android:background="#ff2b2b2b">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton3"
+            android:src="@drawable/settings"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="#ff42a7ef"
+            android:padding="10dp"
+            android:adjustViewBounds="false"
+            android:clickable="false"
+            android:tint="#ffffffff" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/closeButton"
+            android:src="@drawable/off"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:background="#ffffdb58"
+            android:padding="10dp"
+            android:tint="#ffffffff" />
+    </TableRow>
+
+    <!--<TableRow-->
+        <!--android:layout_weight="1">-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/imageButton3"-->
+            <!--android:backgroundTint="#ff37ff56"-->
+            <!--android:background="@drawable/ic_launcher" />-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/imageButton4"-->
+            <!--android:background="@drawable/ic_launcher" />-->
+
+    <!--</TableRow>-->
+
+</TableLayout>
+<!-- From: file:/Users/raulgarciaruiz/workspace/android/PRG-Proyecto06/app/src/main/res/layout/activity_main.xml -->

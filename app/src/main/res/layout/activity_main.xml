@@ -16,22 +16,24 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
+            android:id="@+id/likeButton"
             android:src="@drawable/like"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:background="#ffffffff"
-            android:padding="10dp" />
+            android:background="#ff7cff82"
+            android:padding="10dp"
+            android:tint="#ffffffff" />
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton2"
+            android:id="@+id/hateButton"
             android:src="@drawable/dislike"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:background="#ffefefef"
-            android:padding="10dp" />
+            android:background="#ffef425d"
+            android:padding="10dp"
+            android:tint="#ffffffff" />
     </TableRow>
 
     <TableRow
@@ -45,20 +47,22 @@
             android:src="@drawable/settings"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:background="#ffefefef"
+            android:background="#ff42a7ef"
             android:padding="10dp"
             android:adjustViewBounds="false"
-            android:clickable="false" />
+            android:clickable="false"
+            android:tint="#ffffffff" />
 
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/imageButton4"
+            android:id="@+id/closeButton"
             android:src="@drawable/off"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:background="#ffffffff"
-            android:padding="10dp" />
+            android:background="#ffffdb58"
+            android:padding="10dp"
+            android:tint="#ffffffff" />
     </TableRow>
 
     <!--<TableRow-->

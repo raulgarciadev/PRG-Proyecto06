@@ -21,9 +21,12 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.raul.prg_proyecto06.R.layout.activity_main);
-        final ImageButton settingsButton = (ImageButton)findViewById(com.example.raul.prg_proyecto06.R.id.imageButton3);
+        setContentView(R.layout.activity_main);
+        final ImageButton settingsButton = (ImageButton)findViewById(R.id.imageButton3);
         final SharedPreferences my_preferences = getSharedPreferences("preferences", MODE_PRIVATE);
+        final ImageButton loveButton = (ImageButton)findViewById(R.id.likeButton);
+        final ImageButton hateButton = (ImageButton)findViewById(R.id.hateButton);
+        final ImageButton closeButton = (ImageButton)findViewById(R.id.closeButton);
 
         ambientMusic(my_preferences.getBoolean("music", true));
 
@@ -38,13 +41,44 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        loveButton.setOnClickListener(new View.OnClickListener(){
+
+
+
+            @Override
+            public void onClick(View v) {
+                Intent abrirLikes = new Intent(MainActivity.this, Likes.class);
+                startActivity(abrirLikes);
+            }
+        });
+
+        hateButton.setOnClickListener(new View.OnClickListener(){
+
+
+
+            @Override
+            public void onClick(View v) {
+                Intent abrirLikes = new Intent(MainActivity.this, Hates.class);
+                startActivity(abrirLikes);
+            }
+        });
+
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(com.example.raul.prg_proyecto06.R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -56,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == com.example.raul.prg_proyecto06.R.id.action_settings) {
+        if (id == R.id.action_settings) {
             return true;
         }
 
@@ -65,7 +99,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void ambientMusic(boolean b){
         mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        mSoundId = mSoundPool.load(MainActivity.this, com.example.raul.prg_proyecto06.R.raw.shake, 1);
+        mSoundId = mSoundPool.load(MainActivity.this,R.raw.shake, 1);
 
         if (b){
             mSoundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener(){

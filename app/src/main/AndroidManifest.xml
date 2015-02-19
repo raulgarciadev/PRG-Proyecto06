@@ -24,6 +24,18 @@
             android:name=".Settings"
             android:label="@string/title_activity_settings" >
         </activity>
+        <activity
+            android:name=".Hates"
+            android:label="@string/title_activity_hates" >
+        </activity>
+        <activity
+            android:name=".Likes"
+            android:label="@string/title_activity_likes" >
+        </activity>
+        <activity
+            android:name=".Formulario"
+            android:label="@string/title_activity_formulario" >
+        </activity>
     </application>
 
 </manifest>
